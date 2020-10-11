@@ -10,3 +10,4 @@ my nodejs based script collection.
 |`feat/branch-name`| `feat(branch-name): message` |
 |`change/branch-name`| `change(branch-name): message` |
 |`bugfix/branch-name`| `fix(branch-name): message` |
+|`devop/branch-name`| `devop(branch-name): message` |

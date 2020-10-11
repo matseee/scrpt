@@ -21,7 +21,9 @@ function getCommitPrefix() {
         case 'bugfix':
             return `fix(${branchName.substr(0, branchName.length-1)}): `;
         case 'change':
-            return `change(${branchName.substr(0, branchName.length-1)}): `;
+            return `change(${branchName.substr(0, branchName.length - 1)}): `;
+        case 'devop':
+            return `devop(${branchName.substr(0, branchName.length-1)}): `;
     }
 
     return '';
