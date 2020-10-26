@@ -5,9 +5,9 @@ my nodejs based script collection.
 - creates a git commit
 - creates message by a specfic pattern:
 
-|branch-name|git commit-message|
-|---|---|
-|`feat/branch-name`| `feat(branch-name): message` |
-|`change/branch-name`| `change(branch-name): message` |
-|`bugfix/branch-name`| `fix(branch-name): message` |
-|`devop/branch-name`| `devop(branch-name): message` |
+| branch-name                                 | git commit-message             |
+| ------------------------------------------- | ------------------------------ |
+| `feat/branch-name` or `feature/branch-name` | `feat(branch-name): message`   |
+| `change/branch-name`                        | `change(branch-name): message` |
+| `bugfix/branch-name` or `fix/branch-name`   | `fix(branch-name): message`    |
+| `devop/branch-name`                         | `devop(branch-name): message`  |
