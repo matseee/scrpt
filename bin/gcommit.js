@@ -11,19 +11,21 @@ function checkGitAvailable() {
 }
 
 function getCommitPrefix() {
-    const gitBranch = shelljs.exec('git rev-parse --abbrev-ref HEAD', {silent: true}).stdout;
-    const branchPrefix = gitBranch.split('/')[0];
-    const branchName = gitBranch.split('/')[1];
+    const gitBranch = shelljs.exec('git rev-parse --abbrev-ref HEAD', { silent: true }).stdout;
+    const branchPrefix = gitBranch.split('/')[ 0 ];
+    const branchName = gitBranch.split('/')[ 1 ];
 
     switch (branchPrefix) {
         case 'feature':
-            return `feat(${branchName.substr(0, branchName.length-1)}): `;
+        case 'feat':
+            return `feat(${branchName.substr(0, branchName.length - 1)}): `;
         case 'bugfix':
-            return `fix(${branchName.substr(0, branchName.length-1)}): `;
+        case 'fix':
+            return `fix(${branchName.substr(0, branchName.length - 1)}): `;
         case 'change':
             return `change(${branchName.substr(0, branchName.length - 1)}): `;
         case 'devop':
-            return `devop(${branchName.substr(0, branchName.length-1)}): `;
+            return `devop(${branchName.substr(0, branchName.length - 1)}): `;
     }
 
     return '';
@@ -44,5 +46,5 @@ const params = args.parse(process.argv, {
 if (args.sub.length === 0) {
     args.showHelp();
 } else {
-    commit(args.sub[0]);
+    commit(args.sub[ 0 ]);
 }
