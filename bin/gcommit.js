@@ -48,7 +48,7 @@ function commit(message, stageAllFiles) {
     }
 }
 
-args.option('a', 'stage all files');
+args.option('all', 'stage all files');
 
 const params = args.parse(process.argv, {
     name: 'gcommit',
@@ -58,5 +58,5 @@ const params = args.parse(process.argv, {
 if (args.sub.length === 0) {
     args.showHelp();
 } else {
-    commit(args.sub[ 0 ], params[ 'a' ]);
+    commit(args.sub[ 0 ], params[ 'all' ]);
 }
