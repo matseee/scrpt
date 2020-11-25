@@ -3,6 +3,7 @@ my nodejs based script collection.
 
 ### `gcommit "message"`
 - creates a git commit
+- stage all files with the option `gcommit "message" --all`
 - creates message by a specfic pattern:
 
 | branch-name                                 | git commit-message             |
@@ -11,3 +12,4 @@ my nodejs based script collection.
 | `change/branch-name`                        | `change(branch-name): message` |
 | `bugfix/branch-name` or `fix/branch-name`   | `fix(branch-name): message`    |
 | `devop/branch-name`                         | `devop(branch-name): message`  |
+| `release/release-no`                        | `release(release-no): message` |
