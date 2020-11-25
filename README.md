@@ -11,3 +11,4 @@ my nodejs based script collection.
 | `change/branch-name`                        | `change(branch-name): message` |
 | `bugfix/branch-name` or `fix/branch-name`   | `fix(branch-name): message`    |
 | `devop/branch-name`                         | `devop(branch-name): message`  |
+| `release/release-no`                        | `release(release-no): message` |
