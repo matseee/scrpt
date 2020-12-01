@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-const shelljs = require('shelljs');
 const args = require('args');
+const figlet = require('figlet');
+const shelljs = require('shelljs');
 
 function checkGitAvailable() {
     if (!shelljs.which('git')) {
@@ -32,6 +33,9 @@ function getCommitPrefix() {
 
         case 'release':
             return `release(${branchName.substr(0, branchName.length - 1)}): `;
+
+        case 'refactoring':
+            return `refactoring(${branchName.substr(0, branchName.length - 1)}): `;
     }
 
     return '';
@@ -48,12 +52,28 @@ function commit(message, stageAllFiles) {
     }
 }
 
-args.option('all', 'stage all files');
+args.option('all', 'Stage all files');
 
 const params = args.parse(process.argv, {
     name: 'gcommit',
     value: '<commit-message>'
 });
+
+figlet('gcommit', function (err, data) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log(data);
+});
+
+console.log(figlet.textSync('gcommit', {
+    font: 'ANSI Shadow',
+    horizontalLayout: 'default',
+    verticalLayout: 'default',
+    width: 80,
+    whitespaceBreak: true
+}));
 
 if (args.sub.length === 0) {
     args.showHelp();
