@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "matse's nodejs scripts",
   "bin": {
+    "ttr": "bin/ttr/ttr.js",
     "gcommit": "bin/gcommit/gcommit.js"
   },
   "repository": {
