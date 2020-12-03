@@ -3,8 +3,12 @@
   "version": "1.0.3",
   "description": "matse's nodejs scripts",
   "bin": {
+    "gcommit": "bin/gcommit/gcommit.js",
     "ttr": "bin/ttr/ttr.js",
-    "gcommit": "bin/gcommit/gcommit.js"
+    "ttr-start": "bin/ttr/ttr-start.js",
+    "ttr-pause": "bin/ttr/ttr-pause.js",
+    "ttr-end": "bin/ttr/ttr-end.js",
+    "ttr-list": "bin/ttr/ttr-list.js"
   },
   "repository": {
     "type": "git",
