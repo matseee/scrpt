@@ -59,14 +59,6 @@ const params = args.parse(process.argv, {
     value: '<commit-message>'
 });
 
-figlet('gcommit', function (err, data) {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    console.log(data);
-});
-
 console.log(figlet.textSync('gcommit', {
     font: 'ANSI Shadow',
     horizontalLayout: 'default',
