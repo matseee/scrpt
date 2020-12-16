@@ -41,7 +41,7 @@ function getCommitPrefix() {
     return '';
 }
 
-function commit(message, stageAllFiles) {
+function commit(message, stageAllFiles, pushToOrigin) {
     if (checkGitAvailable()) {
         if (stageAllFiles) {
             shelljs.exec(`git add .`);
@@ -49,10 +49,15 @@ function commit(message, stageAllFiles) {
 
         const completeMessage = getCommitPrefix() + message;
         shelljs.exec(`git commit -m "${completeMessage}"`);
+
+        if (pushToOrigin) {
+            shelljs.exec(`git push origin`);
+        }
     }
 }
 
 args.option('all', 'Stage all files');
+args.option('push', 'Push to origin');
 
 const params = args.parse(process.argv, {
     name: 'gcommit',
@@ -70,5 +75,5 @@ console.log(figlet.textSync('gcommit', {
 if (args.sub.length === 0) {
     args.showHelp();
 } else {
-    commit(args.sub[ 0 ], params[ 'all' ]);
+    commit(args.sub[ 0 ], params[ 'all' ], params['push']);
 }
