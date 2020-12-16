@@ -21,6 +21,7 @@ my nodejs based script collection.
   
   Options:
     -a, --all      Stage all files
+    -p, --push     Push to origin
     -h, --help     Output usage information
     -v, --version  Output the version number
 ```
