@@ -1,6 +1,6 @@
 {
   "name": "scrpt",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "matse's nodejs scripts",
   "bin": {
     "gcommit": "bin/gcommit/gcommit.js",
