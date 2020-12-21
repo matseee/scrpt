@@ -3,7 +3,10 @@
   "version": "1.0.5",
   "description": "matse's nodejs scripts",
   "bin": {
-    "gcom": "bin/gcommit/gcommit.js"
+    "gcommit": "bin/gcommit/gcommit.js",
+    "gcom": "bin/gcommit/gcommit.js",
+    "gstatus": "bin/gstatus/gstatus.js",
+    "gsta": "bin/gstatus/gstatus.js"
   },
   "repository": {
     "type": "git",
