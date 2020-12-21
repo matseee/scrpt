@@ -13,7 +13,7 @@ my nodejs based script collection.
 ╚██████╔╝╚██████╗╚██████╔╝██║ ╚═╝ ██║██║ ╚═╝ ██║██║   ██║   
  ╚═════╝  ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   
                                                             
-  Usage: gcommit [options] [command] <commit-message>
+  Usage: gcom [options] [command] <commit-message>
   
   Commands:
     help     Display help
