@@ -1,7 +1,8 @@
 # scrpt &middot; [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/matseee/scrpt/blob/master/LICENSE) [![npm version](https://badge.fury.io/js/scrpt.svg)](https://www.npmjs.com/package/scrpt)
 my nodejs based script collection.
 
-- [`gcommit`](#gcommit "message")
+- [`gcommit`](#gcommit)
+- [`gstatus`](#gstatus)
 
 ## gcommit
 
@@ -13,7 +14,7 @@ my nodejs based script collection.
 ╚██████╔╝╚██████╗╚██████╔╝██║ ╚═╝ ██║██║ ╚═╝ ██║██║   ██║   
  ╚═════╝  ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   
                                                             
-  Usage: gcommit [options] [command] <commit-message>
+  Usage: gcom [options] [command] <commit-message>
   
   Commands:
     help     Display help
@@ -37,3 +38,27 @@ my nodejs based script collection.
 | `devop/branch-name`                         | `devop(branch-name): message`       |
 | `release/release-no`                        | `release(release-no): message`      |
 | `refactoring/branch-name`                   | `refactoring(branch-name): message` |
+
+## gstatus
+```shelljs
+ ██████╗ ███████╗████████╗ █████╗ ████████╗██╗   ██╗███████╗
+██╔════╝ ██╔════╝╚══██╔══╝██╔══██╗╚══██╔══╝██║   ██║██╔════╝
+██║  ███╗███████╗   ██║   ███████║   ██║   ██║   ██║███████╗
+██║   ██║╚════██║   ██║   ██╔══██║   ██║   ██║   ██║╚════██║
+╚██████╔╝███████║   ██║   ██║  ██║   ██║   ╚██████╔╝███████║
+ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝
+                                                            
+On branch feature/gstatus
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package-lock.json
+        modified:   package.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bin/gstatus/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+- just a wrapper for the command `git status`.

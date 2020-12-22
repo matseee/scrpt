@@ -60,7 +60,7 @@ args.option('all', 'Stage all files');
 args.option('push', 'Push to origin');
 
 const params = args.parse(process.argv, {
-    name: 'gcommit',
+    name: 'gcommit or gcom',
     value: '<commit-message>'
 });
 

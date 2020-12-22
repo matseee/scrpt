@@ -1,9 +1,12 @@
 {
   "name": "scrpt",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "matse's nodejs scripts",
   "bin": {
     "gcommit": "bin/gcommit/gcommit.js",
+    "gcom": "bin/gcommit/gcommit.js",
+    "gstatus": "bin/gstatus/gstatus.js",
+    "gsta": "bin/gstatus/gstatus.js",
     "ttr": "bin/ttr/ttr.js",
     "ttr-start": "bin/ttr/ttr-start.js",
     "ttr-end": "bin/ttr/ttr-end.js",
