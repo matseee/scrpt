@@ -8,9 +8,8 @@ const params = args.parse(process.argv, {
     value: '<task description>'
 });
 
-if (!args.sub.length) {
+if (args.sub.length < 2) {
     console.log('Please enter a task description ...');
 } else {
-    const timeTracker = new TimeTracker();
-    timeTracker.end(args.sub[ 0 ]);
+    new TimeTracker().end(args.sub[ 1 ]);
 }
