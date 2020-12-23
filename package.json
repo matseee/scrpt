@@ -6,7 +6,11 @@
     "gcommit": "bin/gcommit/gcommit.js",
     "gcom": "bin/gcommit/gcommit.js",
     "gstatus": "bin/gstatus/gstatus.js",
-    "gsta": "bin/gstatus/gstatus.js"
+    "gsta": "bin/gstatus/gstatus.js",
+    "ttr": "bin/ttr/ttr.js",
+    "ttr-start": "bin/ttr/ttr-start.js",
+    "ttr-end": "bin/ttr/ttr-end.js",
+    "ttr-list": "bin/ttr/ttr-list.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,7 @@
   "dependencies": {
     "args": "^5.0.1",
     "figlet": "^1.5.0",
+    "moment": "^2.29.1",
     "shelljs": "^0.8.4"
   }
 }
