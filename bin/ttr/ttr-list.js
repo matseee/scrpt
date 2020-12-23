@@ -2,12 +2,20 @@
 const args = require('args');
 const TimeTracker = require('../../lib/ttr/ttr');
 
-args.option('from', 'from output');
-args.option('until', 'until output');
+args.option('from', 'From date');
+args.option('until', 'Until date');
+
+args.option('help', 'Display help');
 
 const params = args.parse(process.argv, {
     name: 'ttr list',
-    value: ''
+    value: '',
+    version: false,
+    help: false
 });
 
-new TimeTracker().list(params['from'], params['until']);
+if (params['help']) {
+    args.showHelp();
+} else {
+    new TimeTracker().list(params['from'], params['until']);
+}

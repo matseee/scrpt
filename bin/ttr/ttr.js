@@ -2,10 +2,11 @@
 const args = require('args');
 const figlet = require('figlet');
 
-args.command('start', 'Starts the time record', null, [ 's' ]);
-args.command('pause', 'Pauses the time record', null, [ 'p' ]);
-args.command('end', 'Ends the time record', null, [ 'e' ]);
-args.command('list', 'Lists the time records of the current week', null, [ 'l' ]);
+args.command('start', 'Starts a new record', null, [ 's' ]);
+args.command('end', 'Ends the active record', null, [ 'e' ]);
+args.command('list', 'Lists the records', null, [ 'l' ]);
+
+args.option('help', 'Display help');
 
 console.log(figlet.textSync('ttr', {
     font: 'ANSI Shadow',
@@ -17,9 +18,10 @@ console.log(figlet.textSync('ttr', {
 
 const params = args.parse(process.argv, {
     name: 'ttr',
-    value: ''
+    value: '',
+    help: false
 });
 
-if (!args.sub.length) {
+if (!args.sub.length || params['help']) {
     args.showHelp();
 }

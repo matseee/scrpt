@@ -3,6 +3,7 @@ my nodejs based script collection.
 
 - [`gcommit`](#gcommit)
 - [`gstatus`](#gstatus)
+- [`ttr`](#ttr)
 
 ## gcommit
 
@@ -62,3 +63,34 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 - just a wrapper for the command `git status`.
+
+## ttr
+```shelljs
+████████╗████████╗██████╗ 
+╚══██╔══╝╚══██╔══╝██╔══██╗
+   ██║      ██║   ██████╔╝
+   ██║      ██║   ██╔══██╗
+   ██║      ██║   ██║  ██║
+   ╚═╝      ╚═╝   ╚═╝  ╚═╝
+                          
+  Usage: ttr [options] [command] 
+  
+  Commands:
+    end, e    Ends the active record
+    list, l   Lists the records
+    start, s  Starts a new record
+    version   Display version
+  
+  Options:
+    -h, --help     Display help
+    -v, --version  Output the version number
+```
+```shelljs
+...
+  Usage: ttr list [options]  
+  
+  Options:
+    -f, --from   From date
+    -h, --help   Display help
+    -u, --until  Until date
+```
